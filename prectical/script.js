@@ -1,1 +1,1 @@
-alert(`Hello, I'm in External File`)
+console.log("Hey I'm in External File");
