@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+        #result {
+            width: 200px;
+            height: 100px;
+            border: 5px ridge purple;
+            margin: 50px;
+            font-size: 50px;
+            text-align: center;
+            color: crimson;
+        }
+    </style>
+  </head>
+  <body>
+    <label for="">First Number</label>
+    <input type="number" id="first" />
+    <br /><br />
+    <label for="">Second Number</label>
+    <input type="number" id="second" />
+    <br /><br>
+
+    <button onclick="Add()">Add</button> 
+    <button onclick="Sub()">Sub</button>
+    <button onclick="Mul()">Mul</button>
+    <button onclick="Div()">Div</button>
+    <button onclick="Result()">Result</button>
+
+    <div id="result"></div>
+
+    <script>
+         
+         function Add() {
+    let firstNumber = parseFloat(document.getElementById("first").value)
+          let secondNumber = parseFloat(document.getElementById("second").value)
+          console.log(firstNumber + secondNumber);
+          let sum = firstNumber + secondNumber
+        // document.getElementById('result').innerText = sum;
+
+ }
+ function Sub() {
+    let firstNumber = parseFloat(document.getElementById("first").value)
+          let secondNumber = parseFloat(document.getElementById("second").value)
+          console.log(firstNumber - secondNumber);
+          let bad = firstNumber - secondNumber
+        // document.getElementById('result').innerText = bad;
+    
+}
+function Mul() {
+    let firstNumber = parseFloat(document.getElementById("first").value)
+          let secondNumber = parseFloat(document.getElementById("second").value)
+          console.log(firstNumber * secondNumber);
+          let gun = firstNumber * secondNumber
+        // document.getElementById('result').innerText = gun;
+    
+}
+function Div() {
+    let firstNumber = parseFloat(document.getElementById("first").value)
+          let secondNumber = parseFloat(document.getElementById("second").value)
+          console.log(firstNumber / secondNumber);
+          let bhag = firstNumber / secondNumber
+        document.getElementById('result').innerText = bhag;
+}
+let currentOperation = '';
+         function setOperation(operation) {
+            currentOperation = operation;
+    
+            let a = parseInt(document.getElementById("first").value);
+            let b = parseInt(document.getElementById("second").value);
+            let result;
+
+            switch (operation) {
+                case '+':
+                    result = a + b;
+                    break;
+                case '-':
+                    result = a - b;
+                    break;
+                case '*':
+                    result = a * b;
+                    break;
+                case '/':
+                    result = a / b;
+                    break;
+                default:
+                    result = 'No operation selected';
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+  </body>
+</html>

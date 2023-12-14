@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+</head>
+<body>
+   <p id="aks">Hello Akshay</p> 
+   <button onclick="replacewala()">Change</button>
+   <script>
+   function replacewala(){
+    let a = document.getElementById("aks").innerHTML;
+    document.getElementById("aks").innerHTML = a.replace("Akshay","Akshay Vaghasiya");
+   }
+   </script>
+</body>
+</html>

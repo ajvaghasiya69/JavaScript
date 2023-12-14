@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice</title>
+</head>
+<body>
+    <p id="av"></p>
+    <script>
+        let a = "Akshay, Ravi, Rahul";
+        // substring and slice is almost same
+        // if we writeen 7 in brecet Extract a part of a string from position 7
+        // if we writeen negetive value Extract a part of a string counting from the end
+        // if we writeen both negetive value Extract a part of a string and return the extracted parts in a new string
+        let b = a.slice(8,12);
+        document.getElementById("av").innerHTML = b;
+    </script>
+</body>
+</html>
