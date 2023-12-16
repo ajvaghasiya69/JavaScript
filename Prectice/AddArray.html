@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add More Array</title>
+</head>
+<body>
+   <h1>Add More Array</h1>
+   <p id="aks"></p>
+   <button onclick="akshay()">Add</button> 
+   <script>
+    let a = [1, 2 ,3];
+    document.getElementById("aks").innerHTML = a;
+    function akshay(){
+        a.push(4);
+        document.getElementById("aks").innerHTML = a;
+        // under code also add array
+//         function myFunction() {
+//   fruits[fruits.length] = "Lemon";
+//   document.getElementById("demo").innerHTML = fruits;
+
+    }
+    
+   </script>
+</body>
+</html>
