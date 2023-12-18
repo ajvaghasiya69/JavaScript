@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form Validation</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="uname"
+      id="uname"
+      onblur="handleValidationName()"
+    />
+    <span id="error1"></span>
+    <br /><br />
+    <input
+      type="text"
+      name="upass"
+      id="upass"
+      onblur="handleValidationPass()"
+    />
+    <span id="error2"></span>
+
+    <br /><br />
+
+    <script>
+      function handleValidationName() {
+        let userNameData = document.getElementById("uname").value;
+        if (userNameData == "") {
+          console.log("Please Enter Valid User Name.");
+          document.getElementById("error1").innerText =
+            "Please Enter Valid User Name.";
+        } else {
+          console.log("Thanks For Valid User Name");
+          document.getElementById("error1").innerText = "";
+        }
+      }
+      function handleValidationPass() {
+        let userPassData = document.getElementById("upass").value;
+        if (userPassData == "") {
+          document.getElementById("error2").innerText =
+            "Please Enter Valid User password.";
+        } else {
+          document.getElementById("error2").innerText = "";
+        }
+      }
+    </script>
+  </body>
+</html>

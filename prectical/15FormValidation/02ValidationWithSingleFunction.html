@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation With single Function</title>
+    <style>
+      :root {
+    --x8pakf8: #e4e6eb;
+    --x11jz1to: #e4e6eb;
+    --xwvesdf: #e4e6eb;
+    --x14jy57b: #e4e6eb;
+    --x1xjt20f: #f02849;
+    --x1q33khj: #1b74e4;
+    --x1wjfhva: #fff;
+    --x14m3912: #f7f8fa;
+    --x1qnp667: #f0f2f5;
+    --x1ojuhre: #050505;
+    --x19yyjk8: #bcc0c4;
+    --x13b0wua: #65676b;
+    --xuafsgg: #1763cf;
+    --x7oi2yx: #1b74e4;
+    --x1lsxukl: #fff;
+    --x1qjl60y: #050505;
+    --xphaj6b: #65676b;
+    --xepdk9e: #fff;
+    --xr21y3p: #1b74e4;
+    --xzfvszf: #1b74e4;
+    --xwlqvzg: #e4e6eb;
+    --x1pgtk7p: #bcc0c4;
+    --xo745zx: #bcc0c4;
+    --x1gr531t: rgba(0, 0, 0, .05);
+    --x1ijorrw: #f02849;
+    --xn0tfz8: #65676b;
+    --x590uvs: #31a24c;
+    --xyjbdbx: #fff;
+    --x1we0gyq: #1763cf;
+    --x161mgqu: #050505;
+    --x1e9hqnq: rgba(255, 255, 255, .8);
+    --x1rd8lt: rgba(0, 0, 0, .8);
+    --xvy4dms: #e4e6eb;
+    --xvwd85c: 0 2px 4px rgba(0, 0, 0, .05);
+}
+button{
+  background-color: var(--x1q33khj);
+  color: var(--xwlqvzg);
+  padding: 10px 30px;
+  border: 1px solid var(--xwlqvzg);
+  font-size: 30px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Form Validation With single Function</h1>
+    <button>Click Me</button>
+    <hr />
+
+    <input
+      type="text"
+      name="uname"
+      id="uname"
+      onblur="handleValidation(this, 'error1', ' User Name')"
+    />
+    <span id="error1"></span>
+    <br /><br />
+    <input
+      type="password"
+      name="upass"
+      id="upass"
+      onblur="handleValidation(this, 'error2', ' User Password')"
+    />
+    <span id="error2"></span>
+    <br /><br />
+    <input
+      type="email"
+      name="uemail"
+      id="uemail"
+      onblur="handleValidation(this, 'error3', ' User Email')"
+    />
+    <span id="error3"></span>
+    <br /><br />
+    <input
+      type="mobile"
+      name="umobile"
+      id="umobile"
+      onblur="handleValidation(this, 'error4', ' User Mobile')"
+    />
+    <span id="error4"></span>
+    <br /><br />
+
+    <script>
+      function handleValidation(a, spnId, msg) {
+        // let userName = document.getElementById("uname").value;
+        // console.log(userName);
+        // console.log(devarsh);
+        // console.log(typeof devarsh);
+
+        if (a.value == "") {
+          document.getElementById(spnId).innerText = "Enter Valid" + msg;
+          document.getElementById(spnId).style.color = "red";
+        } else {
+          document.getElementById(spnId).innerText = "";
+        }
+      }
+      //   handleValidation()
+    </script>
+  </body>
+</html>
