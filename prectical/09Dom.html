@@ -9,23 +9,29 @@
     <h1>Get HTML Data</h1>
     <input type="text" name="first" id="first" class="same" value="anything" />
     <input type="text" name="second" id="second" class="same" />
+    <input type="text" name="second" id="second" class="same" />
+    <input type="text" name="second" id="second" class="same" />
+    <input type="text" name="second" id="second" class="same" />
+    <input type="text" name="second" id="second" class="same" value="chetan"/>
+    <input type="text" name="second" id="second" class="same" />
+    <input type="text" name="second" id="second" class="same" />
 
     <script>
       // Get HTML DATA
 
       // By Id
 
-      //   let inpData = document.getElementById("first");
-      //   // let inpData = document.getElementById("first").value
-      //   console.log(inpData);
-      //   console.log(inpData.value);
+      // let inpData = document.getElementById("first");
+      // let inpData = document.getElementById("first").value
+      // console.log(inpData);
+      // console.log(inpData.value);
 
       // By ClassName
 
-      //   let inpData = document.getElementsByClassName("same");
-      // let inpData = document.getElementById("first").value
-      //   console.log(inpData);
-      //   console.log(inpData.value); // undefined
+      // let inpData = document.getElementsByClassName("same");
+      // // let inpData = document.getElementById("first").value
+      // console.log(inpData);
+      // console.log(inpData[5].value); // undefined
 
       // By  Name
 
@@ -37,9 +43,9 @@
       // By Tag Name
 
       //   let inpData = document.getElementsByTagName("Input");
-      //   // let inpData = document.getElementById("first").value
+      // //   // let inpData = document.getElementById("first").value
       //   console.log(inpData);
-      //   console.log(inpData.value);    // undefined
+      //   console.log(inpData[5].value);    // undefined
 
       // querySelector
 
@@ -51,9 +57,9 @@
       //   querySelectorAll
 
       let inpData = document.querySelectorAll("input");
-      //   // let inpData = document.getElementById("first").value
+        // let inpData = document.getElementById("first").value
       console.log(inpData);
-      //   console.log(inpData.value);   // undefined
+        console.log(inpData[5].value);   // undefined
     </script>
   </body>
 </html>

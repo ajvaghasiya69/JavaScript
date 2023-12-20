@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern In JS</title>
+  </head>
+  <body>
+    <script>
+      // let i = 5;
+      //   for (let i = 0; i <= 10; i++) {
+      //     for (let j = 0; j < i; j++) {
+      //       document.write(j);
+      //       console.log(`Inner loop is :- ${j}`);
+      //     }
+      //     document.write(i);
+      //     document.write("<br>");
+      //     // console.log('Outer Loop is :- ' + i);
+      //     console.log(`Outer loop is :- ${i}`);
+      //   }
+
+      // 2, pattern
+
+      let n = 10;
+
+
+    //   Outer Loop 
+
+      for (let i = 0; i <= n; i++) {
+
+
+        // 1st inner loop  
+
+        // n-i => 10 - 0 => 10, 10 - 1 => 9, .......,10 - 8 => 2, 10-9=>1, 10-10=> 0 
+
+        for (let k = 0; k < n-i; k++) {
+        //   document.write(k)
+          document.write('*')
+        }
+
+
+        // 2nd inner loop 
+
+
+        for (let j = 0; j < i; j++) {
+        //   document.write('*');
+        document.write(j);
+        //   document.write('<br>');
+
+        }
+        document.write('*');
+        // document.write(i);
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
