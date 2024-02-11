@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year and Day Converter</title>
+</head>
+<body>
+   <label for="yearsInput">Enter Year:</label>
+   <input type="number" name="" id="yearinput">
+   <button onclick="calculatedays()">Convert to Days</button>
+   <p id="result1"></p>
+   <label for="dateinput">Enter Days</label>
+   <input type="number" name="" id="dayinput">
+   <button onclick="calculateyear()">Convert to Year</button>
+   <p id="result2"></p>
+
+    <script>
+       function calculatedays(){
+        let year = document.getElementById('yearinput').value;
+        let days = year*365;
+        document.getElementById('result1').innerText = `${year} year = ${days} days`;
+       }
+      function calculateyear(){
+        let days = document.getElementById('dayinput').value;
+        let year = days/365;
+        document.getElementById('result2').innerText = `${days} days = ${year} year`;
+      }
+        
+    </script>
+</body>
+</html>

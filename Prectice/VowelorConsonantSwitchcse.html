@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Enter Character">Enter Character:</label>
+    <input type="text" name="" id="cat">
+    <button onclick="vc()">Vowel Or Character</button>
+   <p id="result"></p> 
+
+   <script>
+    function vc(){
+        let charc = document.getElementById('cat').value;
+        let res;
+        switch(charc){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+               res = "vowel";
+               break;
+               default:
+                    res = "consonant";
+                    break;
+        }
+        document.getElementById('result').innerText = `${charc} is ${res}`;
+    }
+   </script>
+</body>
+</html>

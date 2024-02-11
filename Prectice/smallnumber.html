@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Enter Number">Enter 1st Number:</label>
+    <input type="number" name="" id="fnumber">
+    <label for="Enter Number">Enter 2nd Number:</label>
+    <input type="number" name="" id="snumber">
+    <label for="Enter Number">Enter 3rd Number:</label>
+    <input type="number" name="" id="tnumber">
+    <button onclick="samllnum()">Smallest Number</button>
+    <p id="result"></p>
+    <script>
+        function samllnum(){
+            let num1 = document.getElementById('fnumber').value;
+            let num2 = document.getElementById('snumber').value;
+            let num3 = document.getElementById('tnumber').value;
+
+            let small = (num1 < num2 && num1 < num3)?num1:(num2 < num1 && num2 < num3)?num2:num3;
+            document.getElementById('result').innerText = `${small} is Smallest numbder`;
+
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Enter Character">Enter Character:</label>
+    <input type="text" id="Character">
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+    <script>
+        function check(){
+            let character = document.getElementById('Character').value;
+            let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+            if(character = vowels) {
+                document.getElementById('result').innerText = `${character} is a vowel`;
+            } else {
+                document.getElementById('result').innerText = `${character} is not a vowel`;
+            }
+        }
+    </script>
+</body>
+</html>
