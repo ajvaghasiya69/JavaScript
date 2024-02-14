@@ -378,8 +378,145 @@ document.getelimentbyid().innerHTML = area;
         }
        /script>
       </pre></p>
+
+      <h4>Q.30 What are the looping structures in JavaScript? Any one Example?</h4>
+      <p><b>Ans.</b>there are 5 lopping structures in js 1)for 2)while 3)do while 4)for in 5)for of.  For example, if you want to show a message 100 times, then you can use a loop.</p>
+
+      <h4>Q.31 Write a print 972 to 897 using for loop in JS? </h4>
+      <p><b>Ans.</b><pre>
+         
+    script>
+      let a = 972;
+      let b = 897;
+   for (a; a >= b ; a--){
+      document.write(a + "<br>") ;
+   }
+  /script>
+      </pre></p>
+      <h4>Q.32 Write to print factorial of given number?</h4>
+      <p><b>Ans.</b><pre>
+        script>
+          let integer = 5;
+          let factorial = 1;
+          for(let i = 1; i <= integer; i++) {
+    factorial *= i;
+    document.write(factorial + "<br>");
+  
+  }
+      /script>
+      </pre></p>
+
+      <h4>Q.33 Write to print Fibonacci series up to given numbers?</h4>
+      <p><b>Ans.</b></p>
+
+      <h4>Q.34 Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?</h4>
+      <p><b>Ans.</b><pre>
+        script>
+          let num1 = 123456789;
+      let result = num1.toString().split('').reverse().join('');
+      // split() splits a string into an array of substrings, and returns the array
+      document.write(result);
+        /script> 
+      </pre></p>
+
+      <h4>Q.35 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?</h4>
+      <p><b>Ans.</b>
+      <pre>
+
+      </pre></p>
+      <h4>Q.36 Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: -
+        5) in JS? </h4>
+        <p><b>Ans.</b><pre>
+          script>
+       
+            let num = 98256;
+            let firstdigit = num;
+            let lastdigit = num%10;   
+         
+         while(firstdigit >=10){
+             firstdigit = parseInt(firstdigit/10);
+            
+         }
+         document.write(firstdigit + lastdigit);
+         
+         
+             /script>
+        </pre></p>
+        <h4>
+          Q.37 Use console.log() and escape characters to print the following pattern in JS?
+<pre>1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125
+</pre>
+        </h4>
     
- 
+ <p><b>Ans.</b><pre>
+  script>
+    for (let i = 0; i < 5; i++) {
+      document.write("1 ");
+  }
+  document.write("<br>");
+  for (let i = 0; i < 1; i++) {
+      document.write("2 1 2 4 8 ");
+  }
+  document.write("<br>");
+  for (let i = 0; i < 1; i++) {
+      document.write("3 1 3 9 27 ");
+  }
+  document.write("<br>");
+  for (let i = 0; i < 1; i++) {
+      document.write("4 1 4 16 64 ");
+  }
+  document.write("<br>");
+  for (let i = 0; i < 1; i++) {
+      document.write("5 1 5 25 125 ");
+  }
+  /script>
+ </pre></p>
+ <h4><pre>
+  38 Use pattern in console.log in JS?
+1) 1
+1 0
+1 0 1
+1 0 1 0
+1 0 1 0 1
+ </pre></h4>
+ <p><b>Ans.</b><pre>
+  script>
+    for (let i = 0; i < 1; i++) {
+    document.write("1 ");
+}
+document.write("<br>");
+for (let i = 0; i < 1; i++) {
+    document.write("1 0 ");
+}
+document.write("<br>");
+for (let i = 0; i < 1; i++) {
+    document.write("1 0 1 ");
+}
+document.write("<br>");
+for (let i = 0; i < 1; i++) {
+    document.write("1 0 1 0 1 ");
+}
+document.write("<br>");
+for (let i = 0; i < 1; i++) {
+    document.write("1 0 1 0 1 ");
+}
+
+/script>
+<h4><pre>
+  A
+B C
+D E F
+G H I J
+K L M N O
+</pre></h4>
+<p><b>Ans.</b>
+<pre>
+  
+</pre></p>
 
       </body>
 </html>
