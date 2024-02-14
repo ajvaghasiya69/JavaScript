@@ -515,8 +515,107 @@ K L M N O
 </pre></h4>
 <p><b>Ans.</b>
 <pre>
-  
+  script>
+    let letter = 65; // ASCII code for 'A'
+ for (let i = 1; i <= 5; i++) {
+ let row = '';
+ for (let j = 1; j <= i; j++) {
+     row += String.fromCharCode(letter) + ' ';
+     letter++;
+ }
+ document.write(row + "<br>");
+}
+/script>
 </pre></p>
+<h4><pre> 1
+  2 3
+  4 5 6
+  7 8 9 10
+  11 12 13 14 15</pre></h4>
+  <p><b>Ans.</b>
+  <pre>
+    script>
+      for(i=1; i<=1;i++)
+     
+      { document.write(i );
+        
+      } document.write("<br>");
+          for(i=2;i<=3;i++)
+         {
+          document.write(i + " " );
+         } document.write("<br>");
+         for(i=4;i<=6;i++)
+         {
+          document.write(i + " " );
+         } document.write("<br>");
+         for(i=7;i<=10;i++)
+         {
+          document.write(i+ " ");
+         }
+         document.write("<br>");
+         for(i=11;i<=15;i++)
+       {
+        document.write(i+ " ");
+       }
+         
+  /script>
+  </pre></p>
+  <h4><pre>
+    *
+    * *
+    * * *
+    * * * *
+    * * * * *
+  </pre></h4>
+  <p><b>Ans.</b>
+  <pre>
+    script>
+      for(i=1; i<=1;i++)
+     
+      { document.write("*" );
+        
+      } document.write("<br>");
+          for(i=2;i<=3;i++)
+         {
+          document.write("* ");
+         } document.write("<br>");
+         for(i=4;i<=6;i++)
+         {
+          document.write( "* " );
+         } document.write("<br>");
+         for(i=7;i<=10;i++)
+         {
+          document.write( "* ");
+         }
+         document.write("<br>");
+         for(i=11;i<=15;i++)
+         {
+          document.write( "* ");
+         }
+         
+  /script>
+  </pre></p>
+  <h4>.39 Accept 3 numbers from user using while loop and check each numbers palindrome? </h4>
+  <p><b>Ans.</b>
+  <pre>
+    script>
+      let count = 1;
+  
+      while (count <= 3) {
+          let number = prompt("Enter number " + count + ":");
+          let reversedNumber = number.toString().split('').reverse().join('');
+  
+          if (number == reversedNumber) {
+              alert(number + " is a palindrome.");
+          } else {
+              alert(number + " is not a palindrome.");
+          }
+  
+          count++;
+      }
+     /script>
+  </pre>
+  </p>
 
       </body>
 </html>
