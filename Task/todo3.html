@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="text">
+  <button id="batn">Add</button>
+  <ul id="ul"></ul>
+  <script>
+    let input = document.querySelector('#text');
+    let list = document.querySelector('ul');
+    let batn = document.querySelector('#batn');
+
+    batn.addEventListener("click",function(){
+
+      let node = document.createElement("div");
+      let text = `<input type="checkbox"><input type="text" value="${input.value}"><button class="ed" onclick="edit()">Edit</button><button id="dt" class="del" onclick="delet()">Delete</button>`;
+      node.innerHTML = text;
+      list.appendChild(node);
+      inputdata.value =""
+   
+   
+     
+     
+    });
+    if(chekboxtype.checked){
+        document.querySelector('.del').style.display = "none";
+    }
+
+    
+ function delet(button){
+  
+    let divToDelete = button.parentElement;
+      divToDelete.style.display = "none";
+ }
+
+  </script>
+</body>
+</html>

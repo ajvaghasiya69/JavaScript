@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Append Child</title>
-  </head>
-  <body>
-    <h1 id="heading">Hello</h1>
-    <button onclick="add()">Click</button>
-    <script>
-      function add() {
-            let node = document.createElement("p");
-            let textnode = document.createTextNode("This is a Paragraph");
-            node.appendChild(textnode);
-            document.getElementById("heading").appendChild(node);
-        }
-       
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="text">
+  <button id="batn">Add</button>
+  <ul id="ul"></ul>
+  <script>
+     let inpData = document.querySelector("#text");
+
+let list = document.querySelector("ul");
+let btn = document.getElementById("batn");
+
+btn.addEventListener("click", function () {
+  let node = document.createElement("div");
+  let text = `<input type="checkbox" class='check'><input type="text"  class='data' value="${inpData.value}" >  <button id='heyEdit' onclick='handleEdit(this)'>Edit</button> <button >Delete</button>`;
+  let textNode = document.createTextNode(text);
+  node.appendChild(textNode);
+  node.innerHTML = text;
+  textNode.appendChild = text;
+  list.appendChild(node);
+
+
+  
+});
+  </script>
+</body>
 </html>
