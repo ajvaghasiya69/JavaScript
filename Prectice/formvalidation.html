@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<label for="">Username:</label><input type="text" id="txt" onblur="notvalid()"> <span id="span"></span> <br><br>
+<label for="">Password:</label><input type="password" name="" id="pass" onblur="notvalid2()"> <span id="spa"></span> <br><br>
+<button>Log In</button>
+<script>
+    function notvalid(){
+        let uname = document.getElementById("txt").value;
+        if(uname == ""){
+            document.getElementById("span").innerText = "This is required"
+        }
+        else{
+            document.getElementById("span").innerText = "";
+        }
+      
+
+    }
+    function notvalid2(){
+        let uname = document.getElementById("pass").value;
+        if(uname == ""){
+            document.getElementById("spa").innerText = "This is required"
+        }
+        else{
+            document.getElementById("spa").innerText = "";
+        }
+      
+
+    }
+</script>
+<script>
+    
+</script>
+
+
+</body>
+</html>

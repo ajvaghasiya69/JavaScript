@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Username:</label><input type="text" id="txt" onblur="notvalid(this, 'span')"> <span id="span"></span> <br><br>
+    <label for="">Password:</label><input type="password" name="" id="pass" onblur="notvalid(this,'spa')"> <span id="spa"></span> <br><br>
+    <button>Log In</button>  
+    <script>
+        function notvalid(akshay,mukesh){
+           
+            if(akshay.value == ""){
+                document.getElementById(mukesh).innerHTML = "this is required"
+           
+            }
+            else{
+                document.getElementById(mukesh).innerHTML = "";
+            }
+           
+        }
+    </script>
+</body>
+</html>

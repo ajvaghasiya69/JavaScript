@@ -13,7 +13,7 @@
     let txt = document.getElementById('in');
     let batan = document.getElementById('add');
      batan.addEventListener('click', function (){
-      let li = document.createElement('li');
+      let li = document.createElement('ul');
       li.innerHTML = `<input type="checkbox" class='check'><input type="text"  class='data' value="${txt.value}" >  <button >Edit</button><button class="delet" >Delete</button>`;
       div.appendChild(li); // Append to the body or the desired parent element
 

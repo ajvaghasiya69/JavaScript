@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Username:</label><input type="text" id="txt" onblur="notvalid(this, 'span')"> <span id="span"></span> <br><br>
+    <label for="">Password:</label><input type="password" name="" id="pass" onblur="notvalid2(this,'spa')"> <span id="spa"></span> <br><br>
+   
+    <button>Check</button>
+
+    <script>
+        function notvalid(akshay,mukesh){
+            let name = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
+            
+            if(name.test(akshay.value)){
+                document.getElementById(mukesh).innerHTML = ""
+            }
+            else{
+                document.getElementById(mukesh).innerHTML = "this is not valid"
+            }
+        }
+        function notvalid2(ravi, suresh){
+            let email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if(email.test(ravi.value)){
+                document.getElementById(suresh).innerHTML = ""
+            }
+            else{
+                document.getElementById(suresh).innerHTML = "this is not valid" 
+            }
+        }
+    </script>
+</body>
+</html>

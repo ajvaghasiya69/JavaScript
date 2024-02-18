@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter input:</label>
+    <input type="number" name="" id="num">
+   
+    <button id="btn" onclick="validateInput()">Check</button>
+    <div id="ans"></div>
+    <script>
+        function validateInput(userInput) {
+            let num = document.getElementById('num').value;
+    if(num <= 0){
+        document.getElementById("ans").innerHTML = `${num} is to small`;
+
+    }
+    else if(num >= 0 && num <= 100 ){
+      document.getElementById("ans").innerHTML = `${num} is ok`;
+    }
+    else{
+          document.getElementById("ans").innerHTML = `${num} is not valid"`;
+    }
+    
+   
+}
+
+
+
+    </script>
+</body>
+</html>
