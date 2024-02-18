@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="inp" />
+    <button id="add">ADD</button>
+    <ul></ul>
+    <script>
+      let inpData = document.querySelector("#inp");
+
+      let list = document.querySelector("ul");
+      let btn = document.getElementById("add");
+
+      btn.addEventListener("click", function () {
+        let node = document.createElement("div");
+        let text = `<input type="checkbox" class='check'><input type="text" disabled  class='data' value="${inpData.value}" >  <button id='heyEdit' onclick='handleEdit(this)'>Edit</button> <button >Delete</button>`;
+        let textNode = document.createTextNode(text);
+        node.appendChild(textNode);
+        node.innerHTML = text;
+        textNode.appendChild = text;
+        list.appendChild(node);
+      });
+
+      // Edit Function
+      function handleEdit(a){
+        console.log(a.previousElementSibling);
+
+        if (a.previousElementSibling.disabled) {
+          console.log("hey boii");
+          a.previousElementSibling.removeAttribute("disabled");
+          a.innerHTML = "Save";
+
+          if (a.innerHTML == "Save") {
+            console.log(a.previousElementSibling.value);
+
+            a.addEventListener("click", function () {
+              a.previousElementSibling.setAttribute("disabled", "true");
+              a.innerHTML = "Edit";
+            });
+          }
+        } else {
+          a.previousElementSibling.disabled = true;
+          a.innerHTML = "Edit";
+        }
+      };
+    </script>
+  </body>
+</html>
+
+<!-- let handleEdit = (a) => {
+  console.log(a.previousElementSibling);  
+  if (a.previousElementSibling = 'disabled') {
+    console.log('hey boii');
+    a.previousElementSibling.removeAttribute('disabled')
+    a.innerHTML = 'Save'
+  }
+  else if(a.innerHTML = 'Save'){
+    console.log('hey boii');
+    a.previousElementSibling.setAttribute('disabled', 'disabled')
+    a.innerHTML = 'Edit'
+  }
+}; -->
+
+<!-- 
+let handleEdit = (a) => {
+  console.log(a.previousElementSibling);
+  if (a.previousElementSibling = 'disabled') {
+    console.log('hey boii');
+    a.previousElementSibling.removeAttribute('disabled')
+    a.innerHTML = 'Save'
+    if (a.innerHTML == 'Save') {
+      console.log(a.previousElementSibling.value);
+      a.addEventListener('click', function () {
+        a.previousElementSibling.setAttribute('disabled', 'true')
+        a.innerHTML = 'Edit'
+        handleEdit(a)
+      })
+    }
+
+  }
+  else{
+    a.previousElementSibling = 'disabled'
+    a.innerHTML = 'Edit'
+  }
+}; -->

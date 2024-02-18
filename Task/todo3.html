@@ -7,15 +7,21 @@
 </head>
 <body>
  <input type="text" id="in">
- <div id="div"></div>
+ <span id="div"></span>
   <button id="add">Add</button>
   <script>
     let txt = document.getElementById('in');
     let batan = document.getElementById('add');
      batan.addEventListener('click', function (){
       let li = document.createElement('li');
-      li.innerHTML = `<input type="checkbox" class='check'><input type="text"  class='data' value="${txt.value}" >  <button >Edit</button><button >Delete</button>`;
+      li.innerHTML = `<input type="checkbox" class='check'><input type="text"  class='data' value="${txt.value}" >  <button >Edit</button><button class="delet" >Delete</button>`;
       div.appendChild(li); // Append to the body or the desired parent element
+
+      li.querySelector('.delet').addEventListener('click', function(){
+
+        li.remove();
+      })
+      
     });
   </script>
 </body>
