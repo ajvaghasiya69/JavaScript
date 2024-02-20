@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoisting in JS</title>
+  </head>
+  <body>
+    <h1>Hoisting in JS</h1>
+    <p>
+      Hoisting is a concept or behavior in JavaScript where the declaration of a
+      function, variable, or class goes to the top of the scope they were
+      defined in.
+    </p>
+
+    <script>
+      //   a = 10;
+      //   console.log(a);
+      //   var a;
+
+      greet();
+
+      function greet() {
+        console.log("Namaste Bharat");
+      }
+
+
+      greetAnonymous();
+
+      const greetAnonymous = function () {
+        console.log("Hello function");
+      };
+
+
+      //   Function Declaration is Hoisted but Function Expression is not Hoisted
+    </script>
+  </body>
+</html>

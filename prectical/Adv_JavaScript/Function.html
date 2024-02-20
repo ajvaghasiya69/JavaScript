@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function in JS</title>
+  </head>
+  <body>
+    <h1>Function in JS</h1>
+    <p>
+      Functions are the main “building blocks” of the program. They allow the
+      code to be called many times without repetition.
+    </p>
+    <p>Functions are the heart of JavaScript.</p>
+    <p>Functions are treated as First-Class Citizens in JavaScript.</p>
+
+    <script>
+      //   Function Declaration
+
+      //   function greet() {
+      //     console.log("Namaste Bharat");
+      //   }
+
+      //   greet();
+      //   greet();
+      //   greet();
+      //   greet();
+      //   greet();
+      //   greet();
+
+      //   Local variables
+
+      // A variable declared inside a function is only visible inside that function.
+      // function scoped or local scoped
+
+      //   function local() {
+      //     let a = 10;
+      //     console.log(a);
+      //   }
+      //   local();
+
+      // Outer variables
+
+      //   A function can access an outer variable as well,
+
+      //   let a = 20;
+      //   function local() {
+      //     console.log(a);
+      //   }
+      //   local();
+
+      // Parameters
+
+      // while declaring a function we pass some parameters in the parenthesis (para1, para2)
+
+      // function twoNumber(a, b) {
+      //     console.log(a + b);
+      // }
+
+      // twoNumber(4,5)
+      // twoNumber(2,3)
+      // twoNumber(6,8)
+      // while Calling a function we pass some Arguments in the parenthesis (arg1, arg2)
+
+      // Default values
+
+      // function kuchValue(a, b =10) {
+      //     console.log(a + b);
+      //     console.log(b);
+
+      // }
+
+      // kuchValue(10)
+      // kuchValue(10,20)
+      // kuchValue(10,20,30)
+
+      // Function Always Return Some value
+
+      // function koibhi() {
+      //     console.log('before');
+      //     return console.log('Namaste Bacho');
+      //     console.log('after');
+      // }
+      // koibhi()
+
+      //   function koibhi() {
+      //     console.log("before");
+      //     return setTimeout(() => {
+      //       return console.log("Namaste Bacho");
+      //       console.log("vaibhav");
+      //     }, 2000);
+      //     console.log("after");
+      //   }
+      //   koibhi();
+
+      //   Alternative Default value
+
+      //   function showMessage(first, text) {
+      //   function showMessage(first, text = "Namaste Bharat") {
+      //     // if (text === undefined) {
+      //     //   // if the parameter is missing
+      //     //   text = "Namaste Bharat";
+      //     // }
+
+      //     alert(first + ": " + text);
+      //   }
+
+      //   showMessage("hello"); // empty message
+
+      // Anonymous Function  /  Function Expression
+
+      // SyntaxError: Function statements require a function name
+
+      // function () {
+      //     console.log('Hello function');
+      // }
+
+      //    const greet =  function () {
+      //         console.log('Hello function');
+      //     }
+
+      //     greet()
+
+
+    //   Function Declaration is Hoisted but Function Expression is not Hoisted 
+    </script>
+  </body>
+</html>
