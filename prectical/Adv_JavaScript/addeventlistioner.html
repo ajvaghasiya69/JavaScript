@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Element Dynamically</title>
+    <title>Add Event Listener</title>
 </head>
 <body>
-    <h1>Create Element Dynamically</h1>
-    <button onclick="handleChild()">Click To Add ParaGraph</button>
-    <div id="box"></div>
+    <button onclick="greet()">Click Me with onclick Event</button>
+    <button id="button">Click Me with Add Event Listener</button>
 
 
     <script>
-
-        function handleChild() {
-            let node = document.createElement('p')
-            let textNode = document.createTextNode('Namaste Bharat')
-            node.appendChild(textNode)
-            document.getElementById('box').appendChild(node)
-            
+        function greet() {
+            console.log('Namaste Bharat');
         }
+        greet()
 
+        let btn = document.querySelector('#button')
+        btn.addEventListener('click', function () {
+            console.log('Namaste Bharat With AddEventListener');
+        })
     </script>
 </body>
 </html>
