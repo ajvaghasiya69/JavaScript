@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/gadi1.png" alt="Car Image">
+    <script>
+        const myImage = document.querySelector("img");
+
+        myImage.onclick = () => {
+            const mySrc = myImage.getAttribute("src");
+            if (mySrc === "images/gadi1.png") {
+                myImage.setAttribute("src", "images/gadi2.png");
+            } else {
+                myImage.setAttribute("src", "images/gadi1.png");
+            }
+        };
+    </script>
+</body>
+</html>
