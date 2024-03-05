@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function vehical(name, maker, engine){
+        this.name = name,
+        this.maker = maker,
+        this.engine = engine
+    };
+    vehical.prototype.getdetail = function (){
+        document.write(`The Name of Bike is ${this.name}`);
+    }
+    let bike1 = new vehical('splender','hero','110cc');
+    let bike2 = new vehical('dhum','yamaha','1010cc');
+    document.write(bike1.maker);
+  bike2.getdetail();
+   </script> 
+</body>
+</html>
