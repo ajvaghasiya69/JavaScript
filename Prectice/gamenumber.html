@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let chance = 1;
+        let guessNumber = 25;
+        
+        while (chance <= 3) {
+            let num = prompt(`Enter a Number (Chance ${chance} of 3):`);
+            if (num == guessNumber) {
+                document.write('Congratulations! You guessed it right.');
+                break;
+            } else {
+                document.write('Wrong guess. Please try again.<br>');
+            }
+            chance++;
+        }
+
+        if (chance > 3) {
+            document.write('Sorry, you ran out of chances. The correct number was 25.');
+        }
+    </script>
+</body>
+</html>
