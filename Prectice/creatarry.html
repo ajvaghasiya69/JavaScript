@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = prompt('Enter a Number:')
+        let newarry=[]
+        for(i=1; i<=arr;i++){
+            newarry[i-1] = i;
+          
+        }
+        document.write(newarry + '<br>')
+        let output = newarry.reduce((pre,curr)=>{
+            return pre+curr;
+        })
+        document.write(output + '<br>')
+        let fac = newarry.reduce((pre,curr)=>{
+            return pre*curr;
+        })
+        document.write(fac)
+    </script>
+</body>
+</html>

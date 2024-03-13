@@ -79,5 +79,30 @@
         <button class="button1">Privious</button>
         <button class="button2">Next</button>
     </div>
+    <script>
+        const colors = ['brown', 'skyblue', 'purple', 'skyblue', 'brown'];
+        let currentIndex = 0;
+
+        function next() {
+            currentIndex = (currentIndex + 1) % colors.length;
+            changeColors();
+        }
+
+        function previous() {
+            currentIndex = (currentIndex - 1 + colors.length) % colors.length;
+            changeColors();
+        }
+
+        function changeColors() {
+            const boxes = document.querySelectorAll('.box > div');
+            boxes.forEach((box, index) => {
+                box.style.backgroundColor = colors[(currentIndex + index) % colors.length];
+            });
+        }
+
+        document.querySelector('.button1').addEventListener('click', previous);
+        document.querySelector('.button2').addEventListener('click', next);
+        changeColors(); // Initial color change
+    </script>
 </body>
 </html>
