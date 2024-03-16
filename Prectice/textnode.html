@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text"> <br> <br>
+        <input type="password"> <br><br>
+        <button onclick="sb()">submit</button>
+    </form>
+    <script>
+       function sb(){
+        let x = document.createElement('div'); // Create a div element
+        x.textContent = 'aane bharo'; // Set text content of the div
+        document.body.appendChild(x); // Append the div to the body
+       }
+    </script>
+</body>
+</html>

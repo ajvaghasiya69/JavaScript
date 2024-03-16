@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myClass{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+   <script>
+    let para = document.createElement('p');
+    let p = para.innerText = 'this is para'
+    
+    para.classList.add('myClass');
+    document.body.append(para);
+   </script> 
+</body>
+</html>

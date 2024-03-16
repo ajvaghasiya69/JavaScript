@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .blue{
+            color: blue;
+        }
+        .teal{
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+    <p>this is para</p>
+    <p>this is para</p>
+    <p>this is para</p>
+    <p>this is para</p>
+    <p>this is para</p>
+    <p>this is para</p>
+    <p>this is para</p>
+    <p>this is para</p><p>this is para</p>
+    <script>
+        var para = document.querySelectorAll('p');
+        console.log(para);
+        para.forEach(function(element,index){
+            var classListgroup = ['red','green','blue','teal'];
+            console.log(classListgroup);
+            element.classList.add(classListgroup[index%classListgroup.length]);
+        });
+
+
+    </script>
+</body>
+</html>

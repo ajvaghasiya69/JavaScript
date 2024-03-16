@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Akshay</h1>
+<h1>welcome</h1>
+<h1>Hello</h1>
+<button id="mybtn">Highlight</button>
+<script>
+var btn = document.getElementById('mybtn');
+btn.addEventListener("click",function(){
+    var allh1 = document.querySelectorAll("h1");
+    console.log(allh1);
+    allh1.forEach(function(elemnet){
+        console.log(allh1);
+        element.style.color = 'blue';
+    });
+});
+</script>
+
+
+</body>
+</html>

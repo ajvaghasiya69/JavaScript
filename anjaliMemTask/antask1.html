@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .cls{
+            color: red;
+            background-color: blue;
+            position: fixed;
+            top: 10px;
+            left: 500px;
+        }
+        
+    </style>
+    <div class="div">
+        <h1>hello</h1>
+    </div>
+    <button id="ck">Click me</button>
+    <script>
+        var btn = document.getElementById("ck");
+        btn.addEventListener('click',function(){
+            var doc = document.querySelector('.div')
+            doc.classList.add('cls');
+        })
+    </script>
+</body>
+</html>

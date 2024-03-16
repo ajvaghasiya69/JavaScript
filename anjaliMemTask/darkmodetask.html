@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Welcome to JS</h1>
+    <button id="Light">Light mode</button>
+    <button id="dark">Dark Mode</button>
+    <Script>
+       let light = document.getElementById('Light');
+       light.addEventListener('click', function(){
+        document.querySelector('body').style.backgroundColor = 'white';
+document.querySelector('h1').style.color = 'black';
+        
+       });
+       let dark = document.getElementById('dark');
+       dark.addEventListener('click', function(){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('h1').style.color = 'white';
+       
+        
+       });
+
+    </Script>
+</body>
+</html>
