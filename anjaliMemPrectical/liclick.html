@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <ul>
+    <li id="apple">Apple</li>
+    <li id="mango">Mango</li>
+    <li id="grapes">Grapes</li>
+    <li id="santuru">Santuru</li>
+   </ul>
+    <h1 id="myfruit"></h1>
+    <script>
+        let allli = document.querySelectorAll('li');
+        allli.forEach(function(li){
+            li.addEventListener('click', function() {
+                let h1 = document.getElementById('myfruit');
+                h1.textContent = this.textContent;
+            });
+        });
+
+    </script>
+     
+</body>
+</html>

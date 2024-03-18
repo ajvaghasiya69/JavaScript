@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumbnail img{
+            height: 50px;
+            width: 50px;
+        }
+        .maincontainer img{
+            height: 350px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+   <div class="thumbnail">
+    <img src="../images/by.jfif" alt="">
+    <img src="../images/gadi1.png" alt="">
+    <img src="../images/gadi2.png" alt="">
+    <img src="../images/hanshake.jfif" alt="">
+    <img src="../images/namste.jfif" alt="">
+   </div> 
+   <div class="maincontainer">
+    <img src="../images/by.jfif" alt="">
+   </div>
+   <script>
+    var allimg = document.querySelectorAll('.thumbnail img');
+    console.log(allimg);
+    allimg.forEach(function(img){
+        img.addEventListener('click',function(){
+            var mypath = this.getAttribute('src');
+            console.log(mypath);
+
+            var preview = document.querySelector('.maincontainer img');
+            console.log(preview);
+            preview.setAttribute('src',mypath);
+        })
+    })
+   </script>
+</body>
+</html>

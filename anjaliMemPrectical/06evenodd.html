@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.even{
+        background-color: purple;
+        color: white;
+    }
+    .odd{
+        background-color: blue;
+        color: white;
+    }
+    </style>
+   
+</head>
+<body>
+    <p>This is para 0</p>
+    <p>This is para 1</p>
+    <p>This is para 2</p>
+    <p>This is para 3</p>
+    <p>This is para 4</p>
+    <script>
+        let para = document.querySelectorAll('p');
+       
+       para.forEach(function(p, index) {
+    console.log(index);
+    console.log(p);
+
+    if (index % 2 == 0) {
+        p.classList.add('even');
+    } else {
+        p.classList.add('odd');
+    }
+});
+
+    </script>
+</body>
+</html>
