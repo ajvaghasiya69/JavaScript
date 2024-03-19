@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 1); 
+            transition: box-shadow 0.3s ease; 
+            cursor: pointer; 
+        }
+        .div:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        body {
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease; 
+        }
+        .div1{
+            display: flex;
+            justify-content: center;
+            gap: 250px;
+            margin-top: 70px;
+       
+            
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="div1 div12">
+        <div class="div" style="background-color: blue;"></div>
+        <div class="div" style="background-color: brown;"></div>
+        <div class="div" style="background-color: blueviolet;"></div>
+    </div>
+    <div class="div1 div12">
+        <div class="div" style="background-color: cadetblue;"></div>
+        <div class="div" style="background-color: aqua;"></div>
+        <div class="div" style="background-color: aquamarine;"></div>
+    </div>
+    <div class="div1 div12">
+        <div class="div" style="background-color: yellow;"></div>
+        <div class="div" style="background-color: yellowgreen;"></div>
+        <div class="div" style="background-color: violet;"></div>
+    </div>
+    <script>
+        let box = document.querySelectorAll(".div");
+        box.forEach(function(div){
+            div.addEventListener("click",function(){
+           let background = document.querySelector('body');
+          background.style.backgroundColor = this.style.backgroundColor;
+            });
+        });
+    </script>
+</body>
+</html>

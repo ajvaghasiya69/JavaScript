@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumbnail img{
+          width: 60px;
+          height: 60px;
+          display: block;
+          margin: 5px;
+          bottom: 1px solid silver;
+        }
+        .maincontainer img{
+            height: 400px;
+            width: 330px;
+            position: fixed;
+            left: 90px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail">
+        <img src="../images/leptop1.webp" alt="">
+        <img src="../images/leptop2.webp" alt="">
+        <img src="../images/leptop3.webp" alt="">
+        <img src="../images/leptop4.webp" alt="">
+        <img src="../images/leptop5.webp" alt="">
+        <img src="../images/leptop6.webp" alt="">
+        <img src="../images/leptop7.webp" alt="">
+    </div>
+    <div class="maincontainer">
+        <img src="../images/leptop1.webp" alt="">
+    </div>
+    <script>
+        let allimg = document.querySelectorAll('.thumbnail img');
+        allimg.forEach(function(img){
+            img.addEventListener('click',function(){
+                let mypath = this.getAttribute('src');
+                let preview = document.querySelector('.maincontainer img');
+                preview.setAttribute('src',mypath)
+            })
+        })
+    </script>
+</body>
+</html>

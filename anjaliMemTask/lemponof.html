@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button img {
+            width: 100px;
+            height: 50px;
+        }
+        button {
+            position: fixed;
+            left: 300px;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+   <div class="div"><img src="../images/bulboff.jpg" alt=""></div>
+    <button><img src="../images/switch.jfif" alt=""></button>
+    <script>
+        let button = document.querySelector('button');
+        let bulb = document.querySelector('.div img');
+        
+        button.addEventListener('click', function() {
+            let currentSrc = bulb.getAttribute('src');
+            if (currentSrc === '../images/bulboff.jpg') {
+                bulb.setAttribute('src', '../images/bulbon.jpg');
+            } else {
+                bulb.setAttribute('src', '../images/bulboff.jpg');
+            }
+        });
+    </script>
+</body>
+</html>

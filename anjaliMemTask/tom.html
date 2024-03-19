@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+        <img src="../images/tomrun.jfif" alt="">
+    </div>
+    <button>Catch me</button>
+    <script>
+        let batan = document.querySelector('button');
+        let imgs = document.querySelector('.div img')
+
+        batan.addEventListener('click',function(){
+            let carantsrc = imgs.getAttribute('src');
+            if(carantsrc == '../images/tomrun.jfif'){
+                imgs.setAttribute('src','../images/jerypakdai.jfif')
+            }
+            else{
+                imgs.setAttribute('src','../images/tomrun.jfif')
+            }
+        })
+    </script>
+</body>
+</html>
