@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-<label for="">Username:</label><input type="text" id="txt" onblur="notvalid()"> <span id="span"></span> <br><br>
+<form action="">
+    <label for="">Username:</label><input type="text" id="txt" onblur="notvalid()"> <span id="span"></span> <br><br>
 <label for="">Password:</label><input type="password" name="" id="pass" onblur="notvalid2()"> <span id="spa"></span> <br><br>
 <button>Log In</button>
+</form>
 <script>
     function notvalid(){
         let uname = document.getElementById("txt").value;

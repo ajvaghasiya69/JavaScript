@@ -6,18 +6,23 @@
     <title>Document</title>
     <style>
         button img {
-            width: 100px;
+            width: 70px;
             height: 50px;
         }
         button {
             position: fixed;
-            left: 300px;
-            top: 300px;
+          right: 20px;
+            top: 20px;
+        }
+        .div img{
+            position: fixed;
+            top: 220px;
+            left: 570px;
         }
     </style>
 </head>
 <body>
-   <div class="div"><img src="../images/bulboff.jpg" alt=""></div>
+   <div class="div"><img src="../images/pic_bulboff.gif" alt=""></div>
     <button><img src="../images/switch.jfif" alt=""></button>
     <script>
         let button = document.querySelector('button');
@@ -25,10 +30,12 @@
         
         button.addEventListener('click', function() {
             let currentSrc = bulb.getAttribute('src');
-            if (currentSrc === '../images/bulboff.jpg') {
-                bulb.setAttribute('src', '../images/bulbon.jpg');
+            if (currentSrc === '../images/pic_bulboff.gif') {
+                bulb.setAttribute('src', '../images/pic_bulbon.gif');
+                // document.body.style.backgroundColor = 'black';
             } else {
-                bulb.setAttribute('src', '../images/bulboff.jpg');
+                bulb.setAttribute('src', '../images/pic_bulboff.gif');
+                // document.body.style.backgroundColor = 'white';
             }
         });
     </script>
