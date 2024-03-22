@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="text">
+    <button id="btn">Add</button>
+    <ul id="li"></ul>
+    <!-- 
+        text 
+        button
+
+     -->
+    <script>
+        let batn = document.getElementById('btn');
+        let ul = document.getElementById("li");
+        batn.addEventListener('click',function(){
+
+            let txt = document.getElementById('text');
+            let li = document.createElement('li');
+            li.textContent = txt.value;
+            ul.append(li);
+            txt.value = '';
+        })
+    </script>
+</body>
+</html>
