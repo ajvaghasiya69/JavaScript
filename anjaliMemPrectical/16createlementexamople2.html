@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="linkid" placeholder="enter link">
+    <button onclick="add()">Add</button>
+    <script>
+        function add(){
+            let linkValue = document.getElementById('linkid').value;
+            let a = document.createElement('a');
+            a.setAttribute('href', linkValue); 
+            a.textContent = linkValue; 
+            document.body.append(a);
+           
+        }
+    </script>
+</body>
+</html>

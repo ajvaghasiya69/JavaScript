@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+   <script>
+    let input = document.createElement('input');
+    input.setAttribute('type','text');
+    input.setAttribute('id','nameid');
+    input.setAttribute('placeholder','Enter color');
+    console.log(input);
+    let mybtn = document.createElement('button');
+    mybtn.textContent='Add Me'
+    mybtn.setAttribute('id','btnid');
+    mybtn.setAttribute('onclick','clickbtn()');
+    console.log(mybtn);
+   
+
+
+    function clickbtn(){
+       let box = document.createElement('div');
+       box.classList.add('myclass');
+       document.body.append(box);
+
+       let c= input.value;
+       box.style.backgroundColor = c;
+   
+      
+    }
+    document.body.append(input);
+    document.body.append(mybtn);
+   
+
+   
+   </script> 
+</body>
+</html>

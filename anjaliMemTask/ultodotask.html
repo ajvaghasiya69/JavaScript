@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let input = document.createElement('input');
+    input.setAttribute('type','text');
+    input.setAttribute('id','nameid');
+    input.setAttribute('placeholder','Enter Name');
+    console.log(input);
+    let mybtn = document.createElement('button');
+    mybtn.textContent='Add Me'
+    mybtn.setAttribute('id','btnid');
+    mybtn.setAttribute('onclick','clickbtn()');
+    console.log(mybtn);
+
+
+    function clickbtn(){
+        let li = document.createElement('li');
+        li.textContent=input.value;
+        document.body.append(li);
+    }
+    document.body.append(input);
+    document.body.append(mybtn);
+
+   
+   </script> 
+</body>
+</html>
