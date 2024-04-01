@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="mysubject">
+   <button id="btnsubmit">Submit</button> 
+   <ul id="myid"></ul>
+
+   <script>
+    let myarry = [];
+    document.getElementById('btnsubmit').addEventListener('click',function(){
+        let subject = document.getElementById('mysubject').value;
+        myarry.push(subject);
+        displayData();
+    })
+    let ul = document.querySelector('#myid');
+    function displayData(){
+        ul.innerHTML = ''
+        myarry.forEach(function(item){
+            let li = document.createElement('li');
+            li.textContent = item;
+            ul.append(li);
+        })
+        let alllitag = document.querySelectorAll('li');
+        alllitag.forEach(function(item){
+            item.addEventListener('click',function(e){
+                let removeitem = item.innerText;
+                console.log(removeitem);
+                myarry = myarry.filter(item => item!== removeitem);
+               console.log(myarry);
+                displayData();
+            })
+           
+        })
+    }
+   </script>
+</body>
+</html>

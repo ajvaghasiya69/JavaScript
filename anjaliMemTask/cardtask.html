@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            overflow: hidden;
+        }
+     
+       
+        .img1{
+            position: relative;
+         bottom: 1080px;
+            left: 350px;
+        }
+        .img2{
+            position: relative;
+            bottom: 810px;
+            left: 350px;
+        }
+        .img3{
+            position: relative;
+            bottom: 540px;
+            left: 350px;
+        }
+        .img4{
+            position: relative;
+            /* top: 270px; */
+            bottom: 270px;
+            left: 350px;
+        }
+        .img5{
+            position: relative;
+            /* top: 270px; */
+            left: 350px;
+        }
+    </style>
+</head>
+<body>
+   <div class="div">
+    <div class="img5"><img src="../images/4ko.jfif" alt=""></div>
+    <div class="img4"><img src="../images/10.png" alt=""></div>
+    <div class="img3"><img src="../images/queen.jfif" alt=""></div>
+    <div class="img2"><img src="../images/k.jfif" alt=""></div>
+    <div class="img1"><img src="../images/eko.jfif" alt="">
+    </div>
+   </div> 
+   <script>
+    let div = document.querySelector('.img1');
+ div.addEventListener('mouseover',function(){
+   div.style.marginLeft = '600px'
+  
+
+ })
+ div.addEventListener('click',function(){
+    div.style.display = 'none';
+ })
+
+
+
+ let div1 = document.querySelector('.img2');
+ div1.addEventListener('mouseover',function(){
+   div1.style.marginLeft = '450px'
+  
+
+ })
+ div1.addEventListener('click',function(){
+    div1.style.display = 'none';
+ })
+ 
+
+
+
+ 
+ let div2 = document.querySelector('.img3');
+ div2.addEventListener('mouseover',function(){
+   div2.style.marginLeft = '300px'
+  
+
+ })
+ div2.addEventListener('click',function(){
+    div2.style.display = 'none';
+ })
+
+
+ 
+ let div3 = document.querySelector('.img4');
+ div3.addEventListener('mouseover',function(){
+   div3.style.marginLeft = '150px'
+  
+
+ })
+ div3.addEventListener('click',function(){
+    div3.style.display = 'none';
+ })
+
+ 
+ let div4 = document.querySelector('.img5');
+ div4.addEventListener('mouseover',function(){
+   div4.style.marginLeft = '0px'
+  
+
+ })
+ div4.addEventListener('click',function(){
+    div4.style.display = 'none';
+ })
+ 
+ 
+ 
+    
+    </script>
+</body>
+</html>

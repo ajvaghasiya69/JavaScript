@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="" id="checkAll"> SelectAll
+    <input type="checkbox" name="" class="checkbox" id=""> C Language
+    <input type="checkbox" name="" class="checkbox" id=""> Java 
+
+<input type="checkbox" name=""  class="checkbox"id=""> Python
+
+<input type="checkbox" name=""  class="checkbox"id="">Nord
+<script>
+let selectall = document.querySelector('#checkAll');
+selectall.addEventListener('change',function(e){
+    let allcheckbox = document.querySelectorAll('.checkbox');
+    allcheckbox.forEach(function(chk){
+        chk.checked = selectall.checked;
+    })
+})
+
+
+
+
+
+</script>
+</body>
+</body>
+</html>
