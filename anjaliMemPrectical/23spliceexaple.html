@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            margin: 12px;
+        }
+        .hei{
+            background-color: yellow;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="findid" placeholder="enter which you want to find">
+    <input type="text" id="replaceid" placeholder="element which you want to replace">
+    <button onclick="applychange()">Apply</button> <!-- corrected onclick attribute -->
+    <ul id="myul"></ul>
+    <script>
+        var subjectlist = ['c', 'c++', 'java', 'phython', 'nord'];
+        let ul = document.querySelector('#myul');
+
+        function displayarry() {
+            ul.innerHTML = '';
+            subjectlist.forEach(function(subject) {
+                let li = document.createElement("li");
+                li.textContent = subject;
+                ul.append(li);
+            });
+        }
+
+        displayarry();
+
+        function applychange() {
+            let findelement = document.getElementById('findid').value; // corrected getElementById usage
+            let newelement = document.getElementById('replaceid').value; // corrected getElementById usage
+
+            if (subjectlist.includes(findelement.toLowerCase())) {
+                console.log('yes element is exist');
+
+                let startindex = subjectlist.indexOf(findelement.toLowerCase());
+              subjectlist.splice(startindex, 1, newelement);
+            //  
+                console.log(subjectlist);
+                displayarry();
+                let replacedLi = ul.querySelector("li:nth-child(" + (startindex + 1) + ")");
+                replacedLi.classList.add('hei');
+            } else {
+                console.log('no result found');
+            }
+        }
+    </script>
+</body>
+</html>

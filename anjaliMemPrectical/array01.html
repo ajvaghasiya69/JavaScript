@@ -13,18 +13,22 @@
 
     <script>
         let myarr = []
-        let text = document.getElementById('textid');        
+        
         document.getElementById('mybtn').addEventListener('click',function () {
-            let subject = document.getElementById('textid').value;
+            let h1 = document.getElementById('h1');
+            h1.innerHTML=''
+           
+    
+          let subject = document.getElementById('textid').value;
+         
            myarr.push(subject);
            console.log(myarr);
-           let h1 = document.getElementById('h1');
+           
+           
+          
         h1.append(myarr);
     
-
-    
-       
-        
+      
         })
        
         

@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .calculator {
+            background-color: #fff; 
+            max-width: 500px; 
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        h1 {
+            color: #333; 
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555; 
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: calc(100% - 20px); 
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none; 
+            border-color: #007bff; 
+        }
+
+        select {
+             
+          
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9; 
+            border: 1px solid #ddd; 
+            border-radius: 5px;
+        }
+
+        #result h3 {
+            margin-top: 0;
+            color: #333; 
+        }
+
+        #result p {
+            margin-bottom: 10px; 
+        }
+
+      
+    </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Klayan Jewellers Calculator</h1>
+    <form action="" id="jwel">
+        <label for="Name">Enter Your Name: </label>
+        <input type="text" placeholder="Enter Your Name" id="name"> <br><br>
+
+        <label for="Gender">Enter Your Gender: </label>
+        <select name="" id="gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select> <br><br>
+
+        <label for="Age">Enter Your Age: </label>
+        <input type="number" name="" id="age" placeholder="Enter Your Age"> <br><br>
+
+        <label for="product">Enter Your Product: </label>
+        <select name="" id="product">
+            <option value="Ring">Ring</option>
+            <option value="Neckless">Neckless</option>
+            <option value="Bengle">Bengle</option>
+        </select> <br><br>
+
+        <label for="grm">Enter Your Product Gram: </label>
+        <input type="number" placeholder="Enter Your Product Gram" id="gram"> <br><br>
+
+        <label for="price">Current Gold Price(1 grm): </label>
+        <input type="number" name="" id="price" placeholder="Current Gold Price(1 grm)"> <br><br>
+     
+        <div id="result"></div>
+    </form>
+  </div>
+<script>
+document.getElementById('jwel').addEventListener('input', function(){
+    let name= document.getElementById('name').value;
+    let gender= document.getElementById('gender').value;
+    let age= document.getElementById('age').value;
+    let product= document.getElementById('product').value;
+    let gram= document.getElementById('gram').value;
+    let price= document.getElementById('price').value;
+
+    let discount;
+    let totalprice = gram * price;
+    let makingCharges = gram * 845;
+    let gst = makingCharges * 0.03;
+    let totalMakingCharges = totalprice + makingCharges + gst; 
+    
+    if(age > 65){
+        if(totalMakingCharges > 51000){
+            discount = 0.35;
+        } else if(totalMakingCharges < 51000 && totalMakingCharges > 31000){
+            discount = 0.30;
+        } else if(totalMakingCharges < 31000 && totalMakingCharges > 21000){
+            discount = 0.20;
+        }
+    } else if(age < 65){
+        if(totalMakingCharges > 51000){
+            discount = 0.25;
+        } else if(totalMakingCharges < 51000 && totalMakingCharges > 31000){
+            discount = 0.20;
+        } else if(totalMakingCharges < 31000 && totalMakingCharges > 21000){
+            discount = 0.10;
+        }
+    }
+    if(gender === 'F'){
+        if(age > 65){
+            if(totalMakingCharges > 51000){
+                discount = 0.40;
+            } else if(totalMakingCharges < 51000 && totalMakingCharges > 31000){
+                discount = 0.35;
+            } else if(totalMakingCharges < 31000 && totalMakingCharges > 21000){
+                discount = 0.25;
+            }
+        } else if(age < 65){
+            if(totalMakingCharges > 51000){
+                discount = 0.3;
+            } else if(totalMakingCharges < 51000 && totalMakingCharges > 31000){
+                discount = 0.25;
+            } else if(totalMakingCharges < 31000 && totalMakingCharges > 21000){
+                discount = 0.15;
+            }
+        }
+    }
+
+   
+    let discountamount = totalMakingCharges * discount; 
+    let net = totalMakingCharges - discountamount;     let result = `<h3>Result for ${name}</h3>
+    <p>Total Gold Rate: ${totalprice}</p>
+    <p>Total Making Charges (incl. 3% GST): ${totalMakingCharges}</p>
+    <p>Discount: ${discountamount}</p>
+    <p>Total Net Amount: ${net}</p>`;
+
+    document.getElementById('result').innerHTML = result;
+});
+</script>
+</body>
+</html>
