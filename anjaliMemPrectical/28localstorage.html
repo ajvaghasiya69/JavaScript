@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="savedata()">Save</button> 
+   <button onclick="getvaluedata()">Get Data</button> 
+   <button onclick="cleardata()">clear</button> 
+   <button onclick="removekey()">Remove Subject</button> 
+
+   <script>
+    function savedata(){
+        console.log('clicked');
+        localStorage.setItem("language",'javascript');
+        localStorage.setItem("subject",'react js');
+        localStorage.setItem("subject",'nord js');
+        localStorage.setItem("background-color",'red');
+
+    }
+    function getvaluedata(){
+        let responce = localStorage.getItem('background-color');
+        console.log(responce);
+    }
+    function cleardata(){
+        localStorage.clear()
+        console.log(localStorage.length);
+    }
+    function removekey(){
+        localStorage.removeItem('subject');
+        
+    }
+   </script>
+</body>
+</html>

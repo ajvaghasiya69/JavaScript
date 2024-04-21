@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr,th,td{
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+   <form action="">
+    <input type="text" placeholder="Enter name" id="nameid">
+    <input type="text" placeholder="Enter subject" id="subjectid">
+    <input type="text" placeholder="Enter city" id="cityid">
+    <button>Submit</button>
+   </form>
+   <h1 style="display: none;">No Record Found</h1>
+   <table>
+    <thead id="thead">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SUBJECT</th>
+            <th>CITY</th>
+            <th colspan="2">Action</th>
+        </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+   </table>
+
+    <script>
+        let form= document.querySelector('form');
+       
+
+      
+        form.addEventListener('submit',function(e){
+            e.preventDefault();
+            console.log('submit button press');
+             let name = document.getElementById('nameid');
+        let subject = document.getElementById('subjectid');
+        let city = document.getElementById('cityid');
+            adddata(name,subject,city);
+        })
+        // let obj = [{name: name.value,subject:subject.value,city:city.value}]
+let counterid = 1;
+        function adddata(name,subject,city){
+            let newobj = [{name: name.value,subject:subject.value,city:city.value}]
+            console.log(newobj);
+
+            let exitdata = JSON.parse(localStorage.getItem('student'))||[];
+            console.log('exitdata',exitdata);
+            exitdata.push(newobj)
+            console.log('newupdate',exitdata);
+            localStorage.setItem('student',JSON.stringify(exitdata))
+            displaydata();
+        }
+        function displaydata(){
+           let allrecord = JSON.parse(localStorage.getItem('students')) || [];
+           console.log(allrecord.length);
+           if(allrecord.length == 0){
+            document.querySelector('h1').style.display = 'block'
+           }
+           else{
+            document.querySelector('h1').style.display = 'none'
+            let tbody = document.getElementById('tbody');
+            let tr = tbody.insertRow();
+            console.log(tr);
+            
+           }
+        }
+        displaydata();
+    </script>
+</body>
+</html>
