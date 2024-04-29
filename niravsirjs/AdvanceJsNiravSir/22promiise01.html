@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+       
+        function Emotions(emotion)
+        {
+            console.log(emotion)
+        }
+
+        const VadaRaha = new Promise((callKarega,CallNahiKarega)=>{
+
+            if(callKarega)
+            {
+                return callKarega("Hello Janu...!");
+            }
+            else
+            {
+                return CallNahiKarega("Tu nahi to koi aur sahi...!");
+            }
+        })
+
+        VadaRaha.then(
+            (khushi)=>{ Emotions(khushi)},
+            (gussa)=>{Emotions(gussa)}
+        )
+
+        
+
+    </script>
+    
+</body>
+</html>

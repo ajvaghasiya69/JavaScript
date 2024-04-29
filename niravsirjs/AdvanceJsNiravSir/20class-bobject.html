@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class Test 
+        {
+             x=1;
+             y="hi";
+             z=[12,34,"hi"];
+             
+        }
+
+        const obj1 = new Test;
+        const obj2 = new Test;
+        // console.log(obj1.x)
+        // console.log(obj2.x)
+        // console.log(obj1.y)
+        // console.log(obj1.z)
+
+        class Test1 
+        {
+           x= function fun1()
+            {
+                console.log('fun1')
+            }
+
+           y= function ()
+            {
+                let y=23;
+                console.log('Anonymous'+y)
+            }
+
+           z= ()=>
+            {
+                console.log('Arrow')
+            }
+
+            fun2()
+            {
+                console.log('fun2')
+            }
+
+            funX(x)
+            {
+                console.log(x)
+            }
+
+            static exStatic()
+            {
+                console.log('static')
+            }
+
+            // constructor()
+            // {
+            //     console.log('Called')
+            // }
+
+            constructor(x)
+            {
+                console.log(x)
+            }
+
+        }
+
+        const ob1 = new Test1(1);
+        const ob2 = new Test1(2);
+        const ob3 = new Test1("hi");
+
+        ob1.x();
+        ob1.funX(123)
+        ob1.y();
+        ob1.z();
+        ob1.fun2();
+        Test1.exStatic();
+
+    </script>
+    
+</body>
+</html>
